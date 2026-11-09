@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!-- This page uses English for screen readers. -->
+<!-- Page language is English -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- This helps the page fit phone screens. -->
+  <!-- This helps on phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fashion | Explore unique clothes</title>
   <meta name="description" content="Explore unique and innovative fashion: new arrivals, favourites and special offers.">
 
-  <!-- These links load the Poppins font from Google Fonts -->
+  <!-- These links add the Poppins font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
@@ -16,10 +16,71 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <!-- This link lets keyboard users skip the page links -->
+  <!-- Use this link to skip to the page -->
   <a class="skip-to-main" href="#main">Skip to main content</a>
 
+  <!-- This is the page top -->
+  <header class="header">
+    <div class="container header-inner">
+      <!-- Click the logo to go home -->
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="Fashion">
+      </a>
+
+      <!-- This name tells what this menu is -->
+      <nav class="navigation" aria-label="Main">
+        <ul>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="index.html#arrivals">Fashion</a></li>
+          <li><a href="index.html#favourite">Favourite</a></li>
+          <li><a href="index.html#app">Lifestyle</a></li>
+        </ul>
+      </nav>
+
+      <a class="button button-dark" href="#">Sign Up</a>
+    </div>
+  </header>
+
   <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-content">
+            <h1 class="hero-title" id="hero-title">
+              <span class="mark-white">Let's</span>
+              <span>Explore</span>
+              <span class="mark-yellow">Unique</span>
+              <span>Clothes.</span>
+            </h1>
+
+            <p class="hero-tagline">Live for Influential and Innovative fashion!</p>
+
+            <div class="hero-actions">
+              <span class="hero-brush" aria-hidden="true"></span>
+              <a class="button button-dark" href="catalogue.html">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img src="images/hero.png" width="871" height="784"
+                 alt="Woman in a pink coat in a fashion campaign">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands" aria-label="Brands we stock">
+      <div class="container">
+        <ul class="brand-list">
+          <li><img src="images/hm-transparent.png" width="119" height="70" alt="H and M"></li>
+          <li><img src="images/obey-transparent.png" width="150" height="53" alt="Obey"></li>
+          <li><img src="images/shopify-transparent.png" width="176" height="62" alt="Shopify"></li>
+          <li><img src="images/lacoste-transparent.png" width="235" height="70" alt="Lacoste"></li>
+          <li><img src="images/levis-transparent.png" width="127" height="71" alt="Levi's"></li>
+          <li><img src="images/amzon-transparent.png" width="166" height="63" alt="Amazon"></li>
+        </ul>
+      </div>
+    </section>
   </main>
 </body>
 </html>

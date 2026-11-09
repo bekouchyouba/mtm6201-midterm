@@ -1,4 +1,4 @@
-/* These colours and fonts  */
+/* Page colours and font */
 :root {
   --color-accent: #e5c846;
   --color-black: #000000;
@@ -8,7 +8,7 @@
   --font-main: "Poppins", Arial, sans-serif;
 }
 
-/* This makes element sizes easier to manage*/
+/* This makes sizes easy to use */
 *,
 *::before,
 *::after {
@@ -22,13 +22,13 @@ body {
   color: var(--color-black);
 }
 
-/* This keeps images inside their parent element */
+/* Images stay in their box */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* link above the screen until tab with keybord */
+/* This link shows when you use the keyboard */
 .skip-to-main {
   position: absolute;
   top: -100px;
@@ -42,8 +42,286 @@ img {
   top: 16px;
 }
 
-/* this to shows which element is selected with a keyboard */
+/* This shows what you pick with the keyboard */
 :focus-visible {
   outline: 3px solid var(--color-black);
   outline-offset: 3px;
+}
+
+/* This stops the page from getting too wide */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* This makes the signup link look like a button */
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid var(--color-black);
+  border-radius: 4px;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.button-dark {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.button-dark:hover {
+  background: var(--color-accent);
+  color: var(--color-black);
+  transform: translateY(-2px);
+}
+
+/* This puts the name menu and button in one row */
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 1.25rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+/* On small screens the menu goes under the name */
+.navigation {
+  order: 3;
+  flex-basis: 100%;
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation a {
+  display: inline-block;
+  padding-block: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a[aria-current="page"] {
+  border-color: var(--color-accent);
+}
+
+/* This keeps the menu in one row on wide screens */
+@media (min-width: 640px) {
+  .navigation {
+    order: 0;
+    flex-basis: auto;
+    margin-left: auto;
+  }
+
+  .navigation ul {
+    gap: 0.5rem 1rem;
+  }
+}
+
+/* This adds space around the hero */
+.hero {
+  padding-block: 0.5rem 2rem;
+}
+
+/* This makes a card for the text and picture */
+.hero-card {
+  display: grid;
+  align-items: center;
+  background: var(--color-bg-soft);
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+/* This gives space to the words */
+.hero-content {
+  padding: 2rem 1.5rem 0;
+  animation: fade-up 0.9s ease-out both;
+}
+
+/* This holds the hero picture */
+.hero-image {
+  aspect-ratio: 1.65 / 1;
+  overflow: hidden;
+}
+
+/* This makes the picture fill its space */
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  animation: slide-in 1s ease-out 0.2s both;
+}
+
+/* This makes the big hero words */
+.hero-title {
+  margin: 0 0 1.5rem -0.6rem;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+/* Each word starts on a new line */
+.hero-title span {
+  display: block;
+  width: fit-content;
+  padding-inline: 0.6rem;
+}
+
+/* This puts white behind the first word */
+.mark-white {
+  background: var(--color-white);
+  transform: rotate(-1deg);
+}
+
+/* This puts yellow behind one word */
+.mark-yellow {
+  background: var(--color-accent);
+  transform: rotate(-1deg);
+}
+
+/* This is the small line under the title */
+.hero-tagline {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+}
+
+/* This puts the shape and button in a row */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+/* This makes a yellow shape by the button */
+.hero-brush {
+  width: 90px;
+  height: 18px;
+  background: var(--color-accent);
+  border-radius: 100% 0 100% 0;
+  transform: rotate(-4deg);
+}
+
+/* This makes the hero button bigger */
+.hero .button {
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+}
+
+/* This makes a yellow strip for brand logos */
+.brands {
+  margin-top: 1rem;
+  padding-block: 1.75rem;
+  background: var(--color-accent);
+}
+
+/* This puts the brand logos in a row */
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* This makes all brand logos the same height */
+.brand-list img {
+  height: 2.5rem;
+  width: auto;
+}
+
+/* This puts the hero text and picture side by side on big screens */
+@media (min-width: 1024px) {
+  .hero-card {
+    grid-template-columns: 1fr 1.1fr;
+  }
+
+  .hero-content {
+    padding: 3rem;
+  }
+
+  .hero-image {
+    aspect-ratio: auto;
+    min-height: 420px;
+  }
+
+  .hero-image img {
+    height: 100%;
+    min-height: 420px;
+    object-fit: contain;
+    object-position: right bottom;
+  }
+}
+
+/* This moves the hero text up when the page loads */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* This moves the picture in from the side */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* This turns off motion when a user asks for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
