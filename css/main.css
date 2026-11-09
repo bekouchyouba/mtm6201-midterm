@@ -1,0 +1,49 @@
+/* These colours and fonts  */
+:root {
+  --color-accent: #e5c846;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-lavender: #c2c7dc;
+  --color-bg-soft: #f4f4f2;
+  --font-main: "Poppins", Arial, sans-serif;
+}
+
+/* This makes element sizes easier to manage*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+/* This keeps images inside their parent element */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* link above the screen until tab with keybord */
+.skip-to-main {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.skip-to-main:focus {
+  top: 16px;
+}
+
+/* this to shows which element is selected with a keyboard */
+:focus-visible {
+  outline: 3px solid var(--color-black);
+  outline-offset: 3px;
+}
