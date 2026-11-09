@@ -920,3 +920,162 @@ img {
     padding: 3rem;
   }
 }
+
+/* This puts the contact details and form in columns */
+.contact {
+  padding-block: 1rem 4rem;
+}
+
+.contact-inner {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.contact-panel {
+  padding: 2rem 1.5rem;
+  background: var(--color-accent);
+  border-radius: 32px;
+}
+
+.contact-panel h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contact-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  margin-bottom: 1.75rem;
+  border-radius: 16px;
+}
+
+.contact-panel address {
+  font-style: normal;
+}
+
+.contact-details {
+  margin: 0;
+}
+
+.contact-details div {
+  margin-bottom: 1.25rem;
+}
+
+.contact-details dt {
+  margin-bottom: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-details dd {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.contact-details a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.topic-list {
+  margin: 0 0 1.75rem;
+  padding: 0;
+  border: 0;
+}
+
+.topic-list legend {
+  margin-bottom: 0.75rem;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.topic-options {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.topic-list label {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: 2px solid var(--color-black);
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.topic-list label:hover {
+  background: var(--color-accent);
+}
+
+.topic-list input:checked + label {
+  color: var(--color-white);
+  background: var(--color-black);
+}
+
+.topic-list input:focus-visible + label {
+  outline: 3px solid var(--color-black);
+  outline-offset: 3px;
+}
+
+.form-field {
+  margin-bottom: 1.75rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  font: inherit;
+  color: var(--color-black);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid var(--color-black);
+  border-radius: 0;
+  transition: background-color 0.25s ease;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  background: #fdf6cc;
+}
+
+.button-large {
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .contact-inner {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-panel {
+    padding: 2.5rem;
+  }
+}
