@@ -487,19 +487,32 @@ img {
 /* This puts the sale picture beside its words */
 @media (min-width: 768px) {
   .payday-inner {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.9fr 1.1fr;
   }
 
   .payday-image img {
     margin-left: auto;
     margin-right: 0;
-    max-width: 420px;
+    max-width: 100%;
     -webkit-mask-image: linear-gradient(to right, #000 70%, transparent);
     mask-image: linear-gradient(to right, #000 70%, transparent);
   }
 
   .payday-content {
-    padding: 2rem 3rem 2rem 1.5rem;
+    padding: 2rem 2rem 2rem 1rem;
+  }
+}
+
+/* This puts the last card in the middle on tablets */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .arrival-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .arrival-grid .category:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 1rem);
+    justify-self: center;
   }
 }
 
