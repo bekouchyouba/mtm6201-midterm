@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue | Fashion</title>
+  <meta name="description" content="Browse the Fashion catalogue with hoodies jackets tees and more">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- This link skips to the page content -->
+  <a class="skip-to-main" href="#main">Skip to main content</a>
+
+  <!-- This is the page menu -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="Fashion">
+      </a>
+
+      <nav class="navigation" aria-label="Main">
+        <ul>
+          <li><a href="catalogue.html" aria-current="page">Catalogue</a></li>
+          <li><a href="index.html#arrivals">Fashion</a></li>
+          <li><a href="index.html#favourite">Favourite</a></li>
+          <li><a href="index.html#app">Lifestyle</a></li>
+        </ul>
+      </nav>
+
+      <a class="button button-dark" href="#">Sign Up</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- This shows the page name and path -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-card">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="catalogue.html" aria-current="page">Catalogue</a></li>
+            </ol>
+          </nav>
+
+          <h1 id="page-title">Catalogue</h1>
+          <p>Hoodies jackets tees and more Pick your style from this season's collection</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- These are popular clothes -->
+    <section class="shelf" aria-labelledby="picks-title">
+      <div class="container">
+        <h2 class="section-heading" id="picks-title">
+          <span class="highlight">Top picks</span>
+        </h2>
+
+        <div class="shelf-grid">
+          <article class="category">
+            <div class="category-image">
+              <img src="images/girlgreybg.png" width="484" height="704"
+                   alt="Woman in an orange cropped hoodie with the hood up and grey jeans">
+              <!-- This marks a new item -->
+              <span class="product-badge">New</span>
+            </div>
+            <div class="category-info">
+              <div>
+                <h3><a href="#">Cropped orange hoodie</a></h3>
+                <p class="product-price">$39</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="category">
+            <div class="category-image">
+              <img src="images/girlpurplebg.png" width="484" height="704"
+                   alt="Woman in a pale blue biker jacket and green trousers">
+              <!-- This marks a new item -->
+              <span class="product-badge">New</span>
+            </div>
+            <div class="category-info">
+              <div>
+                <h3><a href="#">Pale blue biker jacket</a></h3>
+                <p class="product-price">$79</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="category">
+            <div class="category-image">
+              <img src="images/girlgreenbg.png" width="490" height="704"
+                   alt="Woman in a white t-shirt and pink denim shorts">
+            </div>
+            <div class="category-info">
+              <div>
+                <h3><a href="#">Classic white tee</a></h3>
+                <p class="product-price">$19</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="category">
+            <div class="category-image">
+              <img src="images/girlyellowbg.png" width="988" height="968"
+                   alt="Woman in a yellow tank top and denim shorts">
+            </div>
+            <div class="category-info">
+              <div>
+                <h3><a href="#">Yellow summer tank</a></h3>
+                <p class="product-price">$24</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- These clothes cost less than forty dollars -->
+    <section class="shelf" aria-labelledby="under-title">
+      <div class="container">
+        <h2 class="section-heading" id="under-title">
+          <span class="highlight">Under $40</span>
+        </h2>
+
+        <div class="shelf-grid shelf-grid-wide">
+          <article class="category">
+            <div class="category-image">
+              <img src="images/girlpinkbg.png" width="838" height="575" loading="lazy"
+                   alt="Woman in a white long-sleeve top and ripped denim shorts">
+              <!-- This marks a sale item -->
+              <span class="product-badge">Sale</span>
+            </div>
+            <div class="category-info">
+              <div>
+                <h3><a href="#">Ribbed long-sleeve top</a></h3>
+                <!-- These are the sale and old prices -->
+                <p class="product-price">
+                  <span class="visually-hidden">Sale price </span>$29
+                  <del><span class="visually-hidden">Original price </span>$39</del>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="category">
+            <div class="category-image">
+              <img src="images/twogirls.png" width="834" height="575" loading="lazy"
+                   alt="Two women in round sunglasses wearing printed tees and denim">
+            </div>
+            <div class="category-info">
+              <div>
+                <h3><a href="#">Printed tie-front tee</a></h3>
+                <p class="product-price">$27</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- This is the email signup -->
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <h2 class="newsletter-title" id="newsletter-title">
+          Join shopping community to get monthly promo
+        </h2>
+        <p class="newsletter-text">Type your email down below and be young wild generation</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" name="email"
+                 placeholder="Add your email here" autocomplete="email" required>
+          <button class="button button-dark" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the page footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <img src="images/logo.png" alt="Fashion">
+        </a>
+        <p>Complete your style with awesome clothes from us</p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Fashion on Facebook">
+            <img src="images/facebook.png" alt="">
+          </a>
+          <a href="#" aria-label="Fashion on Instagram">
+            <img src="images/insta.png" alt="">
+          </a>
+          <a href="#" aria-label="Fashion on X">
+            <img src="images/x.png" alt="">
+          </a>
+          <a href="#" aria-label="Fashion on LinkedIn">
+            <img class="linkedin-logo" src="images/linkdin.png" alt="">
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="Company">
+        <h2>Company</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links" aria-label="Quick links">
+        <h2>Quick Link</h2>
+        <ul>
+          <li><a href="#">Share Location</a></li>
+          <li><a href="#">Orders Tracking</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links" aria-label="Legal">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -814,3 +814,109 @@ img {
     grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 }
+
+/* This adds the catalogue title card */
+.page-hero {
+  padding-block: 0.5rem 2rem;
+}
+
+.page-card {
+  padding: 2rem 1.5rem;
+  background: var(--color-bg-soft);
+  border-radius: 32px;
+}
+
+.page-card h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: uppercase;
+  animation: fade-up 0.9s ease-out both;
+}
+
+.page-card p {
+  max-width: 480px;
+  margin: 0;
+}
+
+/* This shows the way back to the home page */
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  font-size: 0.8rem;
+  list-style: none;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 0.5rem;
+  color: #555555;
+}
+
+.breadcrumb a {
+  color: inherit;
+}
+
+.breadcrumb a[aria-current="page"] {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* This adds space around the product shelves */
+.shelf {
+  padding-block: 2rem 3rem;
+}
+
+.shelf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 2rem;
+}
+
+.shelf-grid-wide {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.shelf-grid-wide .category-image img {
+  aspect-ratio: 834 / 575;
+}
+
+.shelf-grid .category-image img {
+  object-position: 50% 20%;
+}
+
+/* This shows the price and new item labels */
+.product-price {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.product-price del {
+  margin-left: 0.5rem;
+  font-weight: 400;
+  color: #555555;
+}
+
+.product-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-black);
+  background: var(--color-accent);
+  border-radius: 999px;
+}
+
+@media (min-width: 768px) {
+  .page-card {
+    padding: 3rem;
+  }
+}
